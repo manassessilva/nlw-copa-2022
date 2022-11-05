@@ -1,0 +1,162 @@
+* {  /*Informações gerais da página*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {  /*Informações do fundo da página*/
+  background-color: #121214;
+  background-image: url(./assets/bg.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {  /*Informações da caixa com os jogos*/
+  width: fit-content;
+  margin: auto;
+  padding-top: 52px; 
+}
+
+header {  /*Imagem de título da página*/
+  margin-bottom: 63px;
+  text-align:center;    
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --card-title-border-color: #746615;
+  --card-color-primary: #F7DD43;
+  --card-color-beckground: #121214;
+}
+
+:root {
+  --card-title-border-color: #746615;
+  --card-color-primary: #F7DD43;
+  --card-color-beckground: #121214;
+}
+
+body.blue {
+  --card-title-border-color: #ddd6cd;
+  --card-color-primary: #ddd6cd;
+  /*#ddd6cd*/
+}
+
+#cards {
+  display: flex;
+  flex-direction:column;
+  gap: 32px;
+}
+
+.card {  /*Cartão geral que contem as datas e jogos*/
+  padding: 32px 23px;
+  text-align: center;
+  background: #1D1C19;
+  border-bottom: 2px solid var(--card-color-primary);
+  border-radius: 6px;  
+}
+
+.card h2 {  /*Caixa com dia e data dos jogos*/
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid var(--card-title-border-color);
+  border-radius: 6px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 53px;
+  color: #F7DD43;
+}
+
+.card h2 span {  /*Dia do jogo na caixa com a data*/
+  color: #E1E1E6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card h3 {  /*Grupo pelo qual os times jogam*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #E1E1E6;
+}
+
+.card h4 {  /*Nome dos times que iram se enfrentar*/
+  align-items: center;
+  padding: 5px;
+  margin-inline: auto;
+  margin-bottom: 5px;
+  color: #E1E1E6;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.card ul {  /*Caixa com confronto das seleções*/
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 270px;
+}
+
+
+.card ul li {  /*Caixa que contem o jogo e horário*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.card ul li + h3 {  /*Espaçamento entre os jogos dentro do card*/
+  padding-top: 24px;
+  border-top: 1px solid #323238;
+  width: 270px;
+}
+
+.card ul li strong {  /*Texto que informa o horário dos jogos*/
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+  color: #E1E1E6;
+}
+
+.card ul li strong:hover,
+.card ul li ol:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.card {
+  opacity: 0;
+  animation: appear .5s forwards;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;   
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 700px) {
+  #cards {
+    flex-direction: row;
+    max-width: 670px;
+    flex-wrap: wrap;
+  }
+}
