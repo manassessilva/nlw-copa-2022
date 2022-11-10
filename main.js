@@ -1,4 +1,4 @@
-function createGame(player1, group,hour, player2){
+function createGame(player1, group,hour, player2) {
   return `
     
   <h3>${group}</h3>                             
@@ -8,8 +8,9 @@ function createGame(player1, group,hour, player2){
     <ol>
       <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}">
       <h4>${player1}</h4>              
-    </ol>   
+    </ol>
 
+    
     <strong>${hour}</strong> 
   
     <ol>
